@@ -13,7 +13,8 @@
 #define RAISE 2
 #define ADJUST 3
 #define MOUSE 4
-#define SCROLL 1
+#define SYMBOL 5
+#define SCROLL 6
 
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
@@ -41,8 +42,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+         if-layers = <LOWER RAISE>;
+         then-layer = <ADJUST>;
         };
     };
 };
@@ -68,7 +69,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo 5>;
+            bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo SYMBOL>;
         };
     };
 };
@@ -130,7 +131,7 @@
 &kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                        &kp Y         &kp U     &kp I   &kp O      &kp P    &kp EQUAL
 &kp CAPS   &kp A   &kp S       &kp D     &kp F      &kp G      &kp INS           &kp LBKT      &kp H     &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE         &kp RBKT      &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &kp SPACE  &to_scroll_layer  &lt 2 RET     &kp BSPC                              &td1
+&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &kp SPACE  &to_scroll_layer  &lt RAISE RET     &kp BSPC                              &td1
             >;
         };
 
@@ -184,7 +185,16 @@
 
         // Extra layer can be added in ZMK STUDIO
 
-        extra1 { status = "reserved"; };
+        symbol_layer {
+            display-name = "Symbol";
+            bindings = <
+&trans &trans     &trans     &trans     &trans     &trans                    &trans       &trans        &trans         &trans         &trans        &trans
+&trans &kp LS(N2) &kp MINUS  &kp LS(MINUS) &kp EQUAL &kp LS(EQUAL)            &kp SEMI     &kp LS(SEMI)  &kp SQT         &kp LS(SQT)    &trans        &trans
+&trans &trans     &trans     &trans     &trans     &trans                    &trans       &trans        &trans         &trans         &trans        &trans
+&trans &trans     &trans     &trans     &trans     &trans                    &trans       &trans        &trans         &trans         &trans        &trans
+&trans          &trans     &trans     &trans     &trans     &trans            &trans       &trans        &trans         &trans
+            >;
+        };
 
         extra2 { status = "reserved"; };
     };
