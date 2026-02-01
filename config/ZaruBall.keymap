@@ -202,32 +202,35 @@
       >;
     };
 
-    symbol_layer {
+        symbol_layer {
       display-name = "Symbol";
       sensor-bindings = <&inc_dec_kp 0 0>;
+
       bindings = <
-        /* Row0: 16 */
-        &trans  &kp LC(LS(TAB))  &kp LC(TAB)   &kp LC(W)      &kp LC(LS(T))  &kp LC(T)
-        &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(L)  &kp LC(F)
-        &kp LC(R)     &kp F5      &kp LC(LS(N))  &kp LC(LS(P))  &kp LC(P)   &kp ESC
+        /* ───────── Row0 (16) : Excel（上段に集約） ───────── */
+        &trans              &kp F2              &kp LC(ENTER)        &kp LC(LS(L))       &kp LC(SPACE)       &kp LS(SPACE)
+        &none               &none               &none               &none
+        &kp LC(D)           &kp LC(R)           &kp LC(Z)            &kp LC(LS(Z))       &kp LC(S)           &kp LC(F)
 
-        /* Row1: 16 */
-        &trans  &kp LC(C)        &kp LC(V)     &kp LC(X)      &kp LC(Z)      &kp LC(LS(Z))
-        &kp LC(A)     &kp LC(S)  &kp LC(ENTER)  &kp LG(V)
-        &kp LC(LS(V)) &kp LC(LS(T)) &kp LC(TAB) &kp LC(LS(TAB)) &kp LC(N)   &kp DEL
+        /* ───────── Row1 (16) : ブラウザ/タブ（中段） ───────── */
+        &trans              &kp LC(LS(TAB))      &kp LC(TAB)         &kp LC(W)           &kp LC(T)           &kp LC(LS(T))
+        &none               &none               &none               &none
+        &kp LC(L)           &kp LC(LS(L))       &kp LC(P)           &kp LC(N)           &kp LC(LS(TAB))     &kp LC(TAB)
 
-        /* Row2: 18 */
-        &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp DOLLAR     &kp PERCENT    &kp CARET
-        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp UNDERSCORE  &kp MINUS  &kp EQUAL  &kp QUESTION
+        /* ───────── Row2 (18) : ウィンドウ/OS（中段） ───────── */
+        &trans              &kp LA(LS(TAB))      &kp LA(TAB)         &kp LG(LEFT)        &kp LG(UP)          &kp LG(RIGHT)      &kp LG(DOWN)
+        &none               &none               &none               &none
+        &kp LG(D)           &kp LG(E)           &kp LG(S)           &kp LG(V)           &kp LG(L)           &kp LG(I)           &kp LG(A)
 
-        /* Row3: 18 */
-        &trans  &kp HOME  &kp END  &kp PG_UP  &kp PG_DN  &kp BSPC  &kp ENTER
-        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
-        &kp COMMA  &kp DOT  &kp SLASH  &kp SEMICOLON  &kp LS(SEMICOLON)  &kp GRAVE  &kp SINGLE_QUOTE
+        /* ───────── Row3 (18) : 記号（下段：文章入力しやすい） ───────── */
+        &trans              &kp EXCLAMATION      &kp AT_SIGN         &kp HASH            &kp DOLLAR          &kp PERCENT        &tog SYMBOL
+        &none               &none               &none               &none
+        &kp CARET           &kp AMPERSAND       &kp ASTERISK        &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LBKT          &kp RBKT
 
-        /* Row4: 9 */
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        /* ───────── Row4 (9) : 最頻出（いちばん下＝指が楽） ───────── */
+        &trans              &kp LC(C)            &kp LC(V)
+        &kp LC(X)           &kp LC(LS(V))        &kp BSPC
+        &kp ENTER           &kp DEL              &trans
       >;
     };
 
