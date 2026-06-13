@@ -189,6 +189,7 @@
 
         symbol_layer {
             display-name = "Symbol";
+            sensor-bindings = <&scroll_down_up>;
             bindings = <
 &trans &trans     &trans     &trans     &trans     &trans                    &trans       &trans        &trans         &trans         &trans        &trans
 &trans &kp LS(N2) &kp MINUS  &kp LS(MINUS) &kp EQUAL &kp LS(EQUAL)            &kp SEMI     &kp LS(SEMI)  &kp SQT         &kp LS(SQT)    &trans        &trans
@@ -197,6 +198,8 @@
 &trans          &trans     &trans     &trans     &trans     &trans            &trans       &trans        &trans         &trans
             >;
         };
+
+        extra2 { status = "reserved"; };
 
         // Windowsモード（JIS配列設定のWindowsで記号を正しく入力するための補正レイヤー）
         // ADJUST層でtog WINを押してON/OFFします
