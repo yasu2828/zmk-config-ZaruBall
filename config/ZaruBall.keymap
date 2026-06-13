@@ -198,18 +198,6 @@
             >;
         };
 
-        num_layer {
-            display-name = "Num";
-            sensor-bindings = <&scroll_down_up>;
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans   &trans   &trans   &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                &trans  &kp N7   &kp N8   &kp N9   &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans   &kp N4   &kp N5   &kp N6      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp N0   &kp N1   &kp N2   &kp N3      &kp RET  &trans
-&trans          &trans  &trans  &trans  &trans  &trans        &trans  &trans                                 &trans
-            >;
-        };
-
         // Windowsモード（JIS配列設定のWindowsで記号を正しく入力するための補正レイヤー）
         // ADJUST層でtog WINを押してON/OFFします
         win_layer {
@@ -222,6 +210,18 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp RBKT       &trans  &trans  &trans  &trans  &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp BACKSLASH  &trans  &trans  &trans  &trans  &trans         &trans
 &trans          &trans  &trans  &trans  &trans  &trans        &trans         &trans                          &trans
+            >;
+        };
+
+        num_layer {
+            display-name = "Num";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans   &trans   &trans   &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &trans  &kp N7   &kp N8   &kp N9   &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans   &kp N4   &kp N5   &kp N6      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp N0   &kp N1   &kp N2   &kp N3      &kp RET  &trans
+&trans          &trans  &trans  &trans  &trans  &trans        &trans  &trans                                 &trans
             >;
         };
     };
