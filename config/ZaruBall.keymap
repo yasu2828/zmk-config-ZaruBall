@@ -16,6 +16,7 @@
 #define SYMBOL 5
 #define SCROLL 6
 #define WIN    7
+#define NUM    8
 
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
@@ -70,7 +71,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo SYMBOL>;
+            bindings = <&mt RCTL LANG1>, <&tog NUM>, <&mo SYMBOL>;
         };
     };
 };
@@ -130,9 +131,9 @@
             bindings = <
 &kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                       &kp NUMBER_6  &kp N7    &kp N8  &kp N9     &kp N0   &kp SEMI
 &kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                        &kp Y         &kp U     &kp I   &kp O      &kp P    &kp EQUAL
-&kp CAPS   &kp A   &kp S       &kp D     &kp F      &kp G      &kp INS           &kp LBKT      &kp H     &kp J   &kp K      &kp L    &kp MINUS  &kp SQT
-&kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE         &kp RBKT      &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &kp SPACE  &to_scroll_layer  &lt RAISE RET     &kp BSPC                              &td1
+&kp LCTRL  &kp A   &kp S       &kp D     &kp F      &kp G      &kp LC(LS(V))     &kp LBKT      &kp H     &kp J   &kp K      &kp L    &kp MINUS  &kp LS(FSLH)
+&kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp LG(V)         &kp RBKT      &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &kp LS(N1)
+&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &lt NUM SPACE  &to_scroll_layer  &lt LOWER RET     &kp BSPC                              &td1
             >;
         };
 
@@ -197,6 +198,18 @@
             >;
         };
 
+        num_layer {
+            display-name = "Num";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans   &trans   &trans   &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &trans  &kp N7   &kp N8   &kp N9   &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans   &kp N4   &kp N5   &kp N6      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp N0   &kp N1   &kp N2   &kp N3      &kp RET  &trans
+&trans          &trans  &trans  &trans  &trans  &trans        &trans  &trans                                 &trans
+            >;
+        };
+
         // Windowsモード（JIS配列設定のWindowsで記号を正しく入力するための補正レイヤー）
         // ADJUST層でtog WINを押してON/OFFします
         win_layer {
@@ -206,8 +219,8 @@
 // US→JIS補正: =→LS(MINUS)  [→RBKT  '→LS(N7)  `→LS(LBKT)  ]→BACKSLASH  \→INT3
 &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans  &trans  &trans  &trans  &kp LS(MINUS)
-&trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp RBKT       &trans  &trans  &trans  &trans  &trans         &kp LS(N7)
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LBKT)  &kp BACKSLASH  &trans  &trans  &trans  &trans  &trans         &lt SCROLL INT3
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp RBKT       &trans  &trans  &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp BACKSLASH  &trans  &trans  &trans  &trans  &trans         &trans
 &trans          &trans  &trans  &trans  &trans  &trans        &trans         &trans                          &trans
             >;
         };
