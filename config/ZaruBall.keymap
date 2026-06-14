@@ -251,18 +251,6 @@
       >;
     };
 
-    work_layer {
-      display-name = "Work";
-      sensor-bindings = <&scroll_down_up>;
-      bindings = <
-        /* Row0: 16 */ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-        /* Row1: 16 */ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &trans &trans &trans
-        /* Row2: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans  &kp LC(W) &kp LC(LS(TAB)) &kp LC(TAB) &kp LA(LS(TAB)) &kp MINUS &trans
-        /* Row3: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans  &kp LC(LS(T)) &trans &trans &trans &kp LA(TAB) &trans
-        /* Row4: 9  */ &trans &trans &trans &trans &trans &trans &trans &trans &trans
-      >;
-    };
-
     win_layer {
       display-name = "Win";
       sensor-bindings = <&scroll_down_up>;
@@ -271,6 +259,18 @@
         /* Row1: 16 */ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &kp LS(MINUS)
         /* Row2: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &kp RBKT  &trans &trans &trans &trans &trans &trans
         /* Row3: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &kp BACKSLASH  &trans &trans &trans &trans &trans &trans
+        /* Row4: 9  */ &trans &trans &trans &trans &trans &trans &trans &trans &trans
+      >;
+    };
+
+    work_layer {
+      display-name = "Work";
+      sensor-bindings = <&scroll_down_up>;
+      bindings = <
+        /* Row0: 16 */ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+        /* Row1: 16 */ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &trans &trans &trans
+        /* Row2: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans  &kp LC(W) &kp LC(LS(TAB)) &kp LC(TAB) &kp LA(LS(TAB)) &kp MINUS &trans
+        /* Row3: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans  &kp LC(LS(T)) &trans &trans &trans &kp LA(TAB) &trans
         /* Row4: 9  */ &trans &trans &trans &trans &trans &trans &trans &trans &trans
       >;
     };
