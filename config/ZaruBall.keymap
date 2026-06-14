@@ -16,6 +16,7 @@
 #define ADJUST   4
 #define SYMBOL   5
 #define SCROLL   6
+#define WIN      7
 
 // スクロール量の設定
 
@@ -200,7 +201,7 @@
       display-name = "Adjust";
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
       bindings = <
-        &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans              &bt BT_CLR_ALL  &none  &none  &none  &none  &none
+        &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans              &bt BT_CLR_ALL  &none  &none  &none  &none  &tog WIN
         &trans  &kp EXCL      &none         &none         &none         &none                   &trans  &trans  &trans  &trans              &bt BT_CLR      &none  &none  &none  &none  &none
         &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_bat  &out OUT_TOG    &none  &none  &none  &none  &none
         &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_con  &studio_unlock  &none  &none  &none  &none  &none
@@ -249,9 +250,16 @@
       >;
     };
 
-    extra2 {
-      status = "reserved";
-      sensor-bindings = <&inc_dec_kp 0 0>;
+    win_layer {
+      display-name = "Win";
+      sensor-bindings = <&scroll_down_up>;
+      bindings = <
+        /* Row0: 16 */ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+        /* Row1: 16 */ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &kp LS(MINUS)
+        /* Row2: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &kp RBKT  &trans &trans &trans &trans &trans &trans
+        /* Row3: 18 */ &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans  &kp BACKSLASH  &trans &trans &trans &trans &trans &trans
+        /* Row4: 9  */ &trans &trans &trans &trans &trans &trans &trans &trans &trans
+      >;
     };
   };
 };
