@@ -20,7 +20,7 @@
 #define SYMBOL   5
 #define SCROLL   6
 
-// スクロール量の設定
+// スクロール量の設定（build test）
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &trackball_listener {
