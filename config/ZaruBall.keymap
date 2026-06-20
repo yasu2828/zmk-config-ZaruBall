@@ -199,11 +199,11 @@
             display-name = "Work";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&trans  &trans     &trans         &trans     &trans     &trans            &trans  &trans  &trans  &trans            &trans         &trans            &trans             &trans     &trans         &trans
-&trans  &trans     &trans         &trans     &trans     &trans            &trans  &trans  &trans  &trans            &trans         &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans     &trans         &trans
-&trans  &kp LC(A)  &kp LG(LS(S))  &kp LG(D)  &trans     &trans  &trans    &trans  &trans  &trans  &trans    &trans  &kp LC(T)      &kp LC(LS(TAB))   &kp LC(TAB)        &kp LC(W)  &kp LS(LC(T))  &trans
-&trans  &kp LC(Z)  &kp LC(X)      &kp LC(C)  &kp LC(V)  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &kp LC(LS(T))  &kp LALT          &kp LS(TAB)        &kp TAB    &trans         &trans
-&trans  &trans                    &trans     &trans     &trans  &trans                                      &trans  &trans                                                                        &trans
+&trans  &trans     &trans         &trans     &trans         &trans            &trans  &trans  &trans  &trans                &trans         &trans            &trans             &trans     &trans         &trans
+&trans  &trans     &trans         &kp LG(E)  &kp LG(LA(R))  &trans            &trans  &trans  &trans  &trans                &trans         &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans     &trans         &trans
+&trans  &kp LC(A)  &kp LG(LS(S))  &kp LG(D)  &trans         &trans  &trans    &trans  &trans  &trans  &trans    &trans      &kp LC(T)      &kp LC(LS(TAB))   &kp LC(TAB)        &kp LC(W)  &kp LS(LC(T))  &trans
+&trans  &kp LC(Z)  &kp LC(X)      &kp LC(C)  &kp LC(V)      &trans  &trans    &trans  &trans  &trans  &trans    &kp LA(F4)  &kp LC(LS(T))  &kp LALT          &kp LS(TAB)        &kp TAB    &trans         &trans
+&trans  &trans                    &trans     &trans         &trans  &trans                                      &trans      &trans                                                                        &trans
             >;
         };
 
