@@ -151,11 +151,11 @@
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC           &kp N1      &kp N2  &kp N3        &kp N4            &kp N5                                  &none  &none  &none  &none                  &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0          &kp SLASH
-&kp TAB           &kp Q       &kp W   &kp E         &kp R             &kp T                                   &none  &none  &none  &none                  &kp Y         &kp U   &kp I      &kp O    &kp P           &kp LS(FSLH)
-&kp LEFT_ALT      &kp A       &kp S   &lt 2 D       &kp F             &kp G               &kp LC(LS(V))       &none  &none  &none  &none    &kp UP_ARROW  &kp H         &kp J   &kp K      &kp L    &kp MINUS       &lt 2 LS(N1)
-&kp LSHFT         &kp Z       &kp X   &kp C         &kp V             &kp B               &lt 1 LG(V)         &none  &none  &none  &none    &kp DOWN      &kp N         &kp M   &kp COMMA  &kp DOT  &kp LEFT_ARROW  &kp RIGHT_ARROW
-&kp LEFT_CONTROL  &kp C_MUTE          &kp LEFT_WIN  &lt 3 LANGUAGE_2  &SandS LSHFT SPACE  &lt 4 LANGUAGE_1                                  &lt 3 RET     &kp BSPC                                                  &td1
+&kp ESC           &kp N1      &kp N2  &kp N3        &kp N4            &kp N5                               &none  &none  &none  &none                  &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0          &kp SLASH
+&kp TAB           &kp Q       &kp W   &kp E         &kp R             &kp T                                &none  &none  &none  &none                  &kp Y         &kp U   &kp I      &kp O    &kp P           &kp LS(FSLH)
+&kp LEFT_ALT      &kp A       &kp S   &lt 2 D       &kp F             &kp G            &kp LC(LS(V))       &none  &none  &none  &none    &kp UP_ARROW  &kp H         &kp J   &kp K      &kp L    &kp MINUS       &lt 2 LS(N1)
+&kp LSHFT         &kp Z       &kp X   &kp C         &kp V             &kp B            &lt 1 LG(V)         &none  &none  &none  &none    &kp DOWN      &kp N         &kp M   &kp COMMA  &kp DOT  &kp LEFT_ARROW  &kp RIGHT_ARROW
+&kp LEFT_CONTROL  &kp C_MUTE          &kp LEFT_WIN  &lt 3 LANGUAGE_2  &mt LSHFT SPACE  &lt 4 LANGUAGE_1                                  &lt 3 RET     &kp BSPC                                                  &td1
             >;
         };
 
